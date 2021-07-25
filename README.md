@@ -52,57 +52,56 @@ pytest
 
 ### API
 
-```php
-InsomniaFile: [insomnia.json](https://github.com/mpluiz/dock-app/blob/master/docs/insomnia.json)
-BasePath: `/api/v1`
-```
+[`insomnia.json`](https://github.com/mpluiz/dock-app/blob/master/docs/insomnia.json)
 
-```php
+`BasePath: '/api/v1'`
+
+```
 Method: POST
 Endpoint: `/accounts`
 
 Add a new account
 ```
 
-```php
+```
 Method: GET
 Endpoint: `accounts/{accountId}/`
 
 Find account
 ```
 
-```php
+```
 Method: POST
 Endpoint: `/accounts/{accountId}/deposit/`
 
 Make a deposit
 ```
 
-```php
+```
 Method: POST
 Endpoint: `/accounts/{accountId}/withdraw/`
 
-Make a withdrawal
+Make withdrawal if have daily limit
 ```
 
-```php
+```
 Method: PATCH
 Endpoint: `/accounts/{accountId}/deactivate/`
 
 Deactivate account
 ```
 
-```php
+```
 Method: PATCH
 Endpoint: `/accounts/{accountId}/activate/`
 
 Activate Account
 ```
 
-```php
+```
 Method: GET
 Endpoint: `/accounts/{accountId}/transactions/`
 QueryParams: `?start_date=2021-07-24&end_date=2021-07-25`
 
-Find account transaction
+Find account transactions
 ```
