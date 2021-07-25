@@ -52,7 +52,7 @@ pytest
 
 ### API
 
-[`insomnia.json`](https://github.com/mpluiz/dock-app/blob/master/docs/insomnia.json)
+[`insomnia.json`](https://github.com/mpluiz/dock-app/blob/master/insomnia.json)
 
 `BasePath: '/api/v1'`
 
