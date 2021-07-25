@@ -50,6 +50,13 @@ pip install -r requirements.txt
 pytest
 ```
 
+- Executar coverage
+
+```shell
+ coverage run --source=dock/ -m pytest
+ coverage report -m
+```
+
 ### API
 
 [`insomnia.json`](https://github.com/mpluiz/dock-app/blob/master/insomnia.json)
