@@ -57,58 +57,96 @@ pytest
  coverage report -m
 ```
 
-### API
 
+
+## API Reference
 [`insomnia.json`](https://github.com/mpluiz/dock-app/blob/master/insomnia.json)
 
 `BasePath: '/api/v1'`
 
-```
-Method: POST
-Endpoint: `/accounts`
+---
 
-Add a new account
-```
+#### Add a new account
 
-```
-Method: GET
-Endpoint: `accounts/{accountId}/`
-
-Find account
+```http
+  POST /accounts
 ```
 
-```
-Method: POST
-Endpoint: `/accounts/{accountId}/deposit/`
+---
 
-Make a deposit
-```
+#### Find account
 
-```
-Method: POST
-Endpoint: `/accounts/{accountId}/withdraw/`
-
-Make withdrawal if have daily limit
+```http
+  GET accounts/{accountId}/
 ```
 
-```
-Method: PATCH
-Endpoint: `/accounts/{accountId}/deactivate/`
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `accountId`| `String` | **Required**. |
 
-Deactivate account
-```
+---
 
-```
-Method: PATCH
-Endpoint: `/accounts/{accountId}/activate/`
+#### Make a deposit
 
-Activate Account
+```http
+  POST /accounts/{accountId}/deposit/
 ```
 
-```
-Method: GET
-Endpoint: `/accounts/{accountId}/transactions/`
-QueryParams: `?start_date=2021-07-24&end_date=2021-07-25`
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `accountId`| `String` | **Required**. |
 
-Find account transactions
+---
+
+#### Make withdrawal if have daily limit
+
+```http
+  POST /accounts/{accountId}/withdraw/
 ```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `accountId`| `String` | **Required**. |
+
+---
+
+#### Deactivate account
+
+```http
+  PATCH /accounts/{accountId}/deactivate/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `accountId`| `String` | **Required**. |
+
+---
+
+#### Activate Account
+
+```http
+  PATCH /accounts/{accountId}/activate/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `accountId`| `String` | **Required**. |
+
+---
+
+#### Find account transactions
+
+```http
+  PATCH /accounts/{accountId}/transactions?start_date=2021-07-24&end_date=2021-07-25
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `accountId`| `String` | **Required**. |
+| `start_date`| `Query String` | **Required**. |
+| `end_date`| `Query String` | **Required**. |
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
